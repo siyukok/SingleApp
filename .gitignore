@@ -66,3 +66,14 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.idea/xcode.xml
+/SingleApp.xcodeproj/.idea/modules.xml
+/SingleApp.xcodeproj/.idea/SingleApp.xcodeproj.iml
+/SingleApp.xcodeproj/.idea/SingleApp.xcodeproj1.iml
+/SingleApp.xcodeproj/.idea/vcs.xml
+/SingleApp.xcodeproj/.idea/workspace.xml
+/SingleApp.xcodeproj/.idea/xcode.xml
