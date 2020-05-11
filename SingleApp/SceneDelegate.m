@@ -24,13 +24,13 @@
     UITabBarController *tabBarController = [[UITabBarController alloc]init];
     
     ViewController *vc = [[ViewController alloc]init];
-    UINavigationController *unvc1 = [[UINavigationController alloc]initWithRootViewController:vc];
-    
+//    vc.hidesBottomBarWhenPushed = YES;
+//    UINavigationController *unvc1 = [[UINavigationController alloc]initWithRootViewController:vc];
+
 //    UIViewController *uvc1 = [[UIViewController alloc]init];
-    unvc1.view.backgroundColor = [UIColor redColor];
-    unvc1.tabBarItem.title = @"新闻";
-    unvc1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x"];
-    unvc1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
+    vc.tabBarItem.title = @"新闻";
+    vc.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x"];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
     
     UIViewController *uvc2 = [[UIViewController alloc]init];
     uvc2.view.backgroundColor = [UIColor blueColor];
@@ -50,9 +50,11 @@
     uvc4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
     uvc4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
     
-    [tabBarController setViewControllers:@[unvc1,uvc2,uvc3,uvc4]];
-    
-    self.window.rootViewController = tabBarController;
+    [tabBarController setViewControllers:@[vc,uvc2,uvc3,uvc4]];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+
+    self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible]; //设置这个window为主(key)窗口并设置成为可见
 }
