@@ -9,7 +9,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -51,7 +51,7 @@
     uvc4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
     
     [tabBarController setViewControllers:@[unvc1,uvc2,uvc3,uvc4]];
-    
+    tabBarController.delegate = self;
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible]; //设置这个window为主(key)窗口并设置成为可见
@@ -90,5 +90,8 @@
     // to restore the scene back to its current state.
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"did select");
+}
 
 @end
