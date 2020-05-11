@@ -7,35 +7,8 @@
 //
 
 #import "ViewController.h"
-@interface TestView : UIView
-@end
 
-@implementation TestView
-
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
-- (void)willMoveToSuperview:(nullable UIView *)newSuperview{
-    [super willMoveToSuperview:newSuperview];
-} 
-- (void)didMoveToSuperview{
-    [super didMoveToSuperview];
-}
-- (void)willMoveToWindow:(nullable UIWindow *)newWindow{
-    [super willMoveToWindow:newWindow];
-}
-- (void)didMoveToWindow{
-    [super didMoveToWindow];
-}
-
-@end
-
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -43,23 +16,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TestView *view1 = [[TestView alloc] init];
-    view1.backgroundColor = [UIColor redColor];
-    view1.frame = CGRectMake(100, 100, 100, 100);
-    [self.view addSubview:view1];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    UITapGestureRecognizer *tagGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushController)];
-    
-    [view1 addGestureRecognizer:tagGesture];
+
+    UITableView *uiTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    uiTableView.dataSource = self;
+    uiTableView.delegate = self;
+    [self.view addSubview:uiTableView];
 }
 
-- (void)pushController{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.navigationItem.title = @"内容";
-    vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:nil];
-    vc.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:vc animated:true];
+- (void)pushController {
+
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"标题 - %@ - %@", @(indexPath.section), @(indexPath.row)];
+    cell.detailTextLabel.text = @"副标题";
+    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video_selected.png"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *uiViewController = [[UIViewController alloc] init];
+    uiViewController.title = [NSString stringWithFormat:@"%@", @(indexPath.row)];
+    uiViewController.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:uiViewController animated:YES];
+}
+
 
 @end

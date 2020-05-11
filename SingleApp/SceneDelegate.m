@@ -27,7 +27,7 @@
     UINavigationController *unvc1 = [[UINavigationController alloc]initWithRootViewController:vc];
     
 //    UIViewController *uvc1 = [[UIViewController alloc]init];
-    unvc1.view.backgroundColor = [UIColor redColor];
+//    unvc1.view.backgroundColor = [UIColor redColor];
     unvc1.tabBarItem.title = @"新闻";
     unvc1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x"];
     unvc1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
