@@ -8,6 +8,7 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "VideoViewController.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 
@@ -20,23 +21,19 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];//创建一个Window
     UITabBarController *tabBarController = [[UITabBarController alloc]init];
     
-    ViewController *vc = [[ViewController alloc]init];
-    UINavigationController *unvc1 = [[UINavigationController alloc]initWithRootViewController:vc];
-    
-//    UIViewController *uvc1 = [[UIViewController alloc]init];
-//    unvc1.view.backgroundColor = [UIColor redColor];
-    unvc1.tabBarItem.title = @"新闻";
-    unvc1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x"];
-    unvc1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
-    
-    UIViewController *uvc2 = [[UIViewController alloc]init];
-    uvc2.view.backgroundColor = [UIColor blueColor];
-    uvc2.tabBarItem.title = @"视频";
-    uvc2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x"];
-    uvc2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x"];
+    ViewController *vc1 = [[ViewController alloc]init];
+    vc1.tabBarItem.title = @"新闻";
+    vc1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x"];
+    vc1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x"];
+
+    VideoViewController *vc2 = [[VideoViewController alloc] init];
+    vc2.tabBarItem.title = @"视频";
+    vc2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x"];
+    vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x"];
     
     UIViewController *uvc3 = [[UIViewController alloc]init];
     uvc3.view.backgroundColor = [UIColor yellowColor];
@@ -50,9 +47,10 @@
     uvc4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
     uvc4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
     
-    [tabBarController setViewControllers:@[unvc1,uvc2,uvc3,uvc4]];
+    [tabBarController setViewControllers:@[vc1,vc2,uvc3,uvc4]];
     tabBarController.delegate = self;
-    self.window.rootViewController = tabBarController;
+    UINavigationController *rootController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    self.window.rootViewController = rootController;
     
     [self.window makeKeyAndVisible]; //设置这个window为主(key)窗口并设置成为可见
 }

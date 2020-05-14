@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58996C53BAC0705391D4D270 /* VideoViewController.m */; };
 		605C79B12462C89E006AE912 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B02462C89E006AE912 /* AppDelegate.m */; };
 		605C79B42462C89F006AE912 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B32462C89F006AE912 /* SceneDelegate.m */; };
 		605C79B72462C89F006AE912 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B62462C89F006AE912 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58996C53BAC0705391D4D270 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		58996E323A4D45F73CC99CFF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		605C79AC2462C89E006AE912 /* SingleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605C79AF2462C89E006AE912 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		605C79B02462C89E006AE912 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				605C79BD2462C8A0006AE912 /* LaunchScreen.storyboard */,
 				605C79C02462C8A0006AE912 /* Info.plist */,
 				605C79C12462C8A0006AE912 /* main.m */,
+				58996C53BAC0705391D4D270 /* VideoViewController.m */,
+				58996E323A4D45F73CC99CFF /* VideoViewController.h */,
 			);
 			path = SingleApp;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				605C79B12462C89E006AE912 /* AppDelegate.m in Sources */,
 				605C79C22462C8A0006AE912 /* main.m in Sources */,
 				605C79B42462C89F006AE912 /* SceneDelegate.m in Sources */,
+				58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
