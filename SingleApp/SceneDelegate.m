@@ -9,6 +9,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "VideoViewController.h"
+#import "RecommendViewController.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 
@@ -34,12 +35,11 @@
     vc2.tabBarItem.title = @"视频";
     vc2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x"];
     vc2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x"];
-    
-    UIViewController *uvc3 = [[UIViewController alloc]init];
-    uvc3.view.backgroundColor = [UIColor yellowColor];
-    uvc3.tabBarItem.title = @"精选";
-    uvc3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x"];
-    uvc3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x"];
+
+    RecommendViewController *vc3 = [[RecommendViewController alloc] init];
+    vc3.tabBarItem.title = @"精选";
+    vc3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x"];
+    vc3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x"];
     
     UIViewController *uvc4 = [[UIViewController alloc]init];
     uvc4.view.backgroundColor = [UIColor greenColor];
@@ -47,7 +47,7 @@
     uvc4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x"];
     uvc4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x"];
     
-    [tabBarController setViewControllers:@[vc1,vc2,uvc3,uvc4]];
+    [tabBarController setViewControllers:@[vc1,vc2,vc3,uvc4]];
     tabBarController.delegate = self;
     UINavigationController *rootController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
     self.window.rootViewController = rootController;

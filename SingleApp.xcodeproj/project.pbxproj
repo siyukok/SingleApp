@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58996C53BAC0705391D4D270 /* VideoViewController.m */; };
+		58996C3057285341D55E6CD3 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58996BBC8673E6ECC823A823 /* RecommendViewController.m */; };
 		605C79B12462C89E006AE912 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B02462C89E006AE912 /* AppDelegate.m */; };
 		605C79B42462C89F006AE912 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B32462C89F006AE912 /* SceneDelegate.m */; };
 		605C79B72462C89F006AE912 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B62462C89F006AE912 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5899667D5436C9F590CDFCED /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		58996BBC8673E6ECC823A823 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		58996C53BAC0705391D4D270 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		58996E323A4D45F73CC99CFF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		605C79AC2462C89E006AE912 /* SingleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,8 @@
 				605C79C12462C8A0006AE912 /* main.m */,
 				58996C53BAC0705391D4D270 /* VideoViewController.m */,
 				58996E323A4D45F73CC99CFF /* VideoViewController.h */,
+				58996BBC8673E6ECC823A823 /* RecommendViewController.m */,
+				5899667D5436C9F590CDFCED /* RecommendViewController.h */,
 			);
 			path = SingleApp;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				605C79C22462C8A0006AE912 /* main.m in Sources */,
 				605C79B42462C89F006AE912 /* SceneDelegate.m in Sources */,
 				58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */,
+				58996C3057285341D55E6CD3 /* RecommendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
