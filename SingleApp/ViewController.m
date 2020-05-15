@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,13 +34,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"标题 - %@ - %@", @(indexPath.section), @(indexPath.row)];
-    cell.detailTextLabel.text = @"副标题";
-    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video_selected.png"];
+    [cell initLabelText];
     return cell;
 }
 

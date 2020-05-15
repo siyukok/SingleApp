@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5899631FDC4D8F6F7691F3F0 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5899693490FB731A11AFF9DB /* CustomTableViewCell.m */; };
 		58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58996C53BAC0705391D4D270 /* VideoViewController.m */; };
 		58996C3057285341D55E6CD3 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58996BBC8673E6ECC823A823 /* RecommendViewController.m */; };
 		605C79B12462C89E006AE912 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605C79B02462C89E006AE912 /* AppDelegate.m */; };
@@ -20,7 +21,9 @@
 
 /* Begin PBXFileReference section */
 		5899667D5436C9F590CDFCED /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		5899693490FB731A11AFF9DB /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		58996BBC8673E6ECC823A823 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		58996BE5015E9D636BF89233 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		58996C53BAC0705391D4D270 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		58996E323A4D45F73CC99CFF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		605C79AC2462C89E006AE912 /* SingleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,8 @@
 				58996E323A4D45F73CC99CFF /* VideoViewController.h */,
 				58996BBC8673E6ECC823A823 /* RecommendViewController.m */,
 				5899667D5436C9F590CDFCED /* RecommendViewController.h */,
+				5899693490FB731A11AFF9DB /* CustomTableViewCell.m */,
+				58996BE5015E9D636BF89233 /* CustomTableViewCell.h */,
 			);
 			path = SingleApp;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				605C79B42462C89F006AE912 /* SceneDelegate.m in Sources */,
 				58996976DD16CB73E6103E59 /* VideoViewController.m in Sources */,
 				58996C3057285341D55E6CD3 /* RecommendViewController.m in Sources */,
+				5899631FDC4D8F6F7691F3F0 /* CustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
