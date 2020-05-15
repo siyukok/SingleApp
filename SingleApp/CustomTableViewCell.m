@@ -15,6 +15,7 @@
 @property(nonatomic, strong, readwrite) UILabel *sourceLabel;
 @property(nonatomic, strong, readwrite) UILabel *commentLabel;
 @property(nonatomic, strong, readwrite) UILabel *timeLabel;
+@property(nonatomic, strong, readwrite) UIImageView *rightImageView;
 @end
 
 @implementation CustomTableViewCell
@@ -46,6 +47,10 @@
             self.timeLabel.textColor = [UIColor grayColor];
             self.timeLabel;
         })];
+        [self.contentView addSubview:({
+            self.rightImageView = [[UIImageView alloc] init];
+            self.rightImageView;
+        })];
     }
 
     return self;
@@ -61,6 +66,8 @@
     self.timeLabel.text = @"时间";
     [self.timeLabel sizeToFit];
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15, self.sourceLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
+    self.rightImageView.frame = CGRectMake(330, 15, 70, 70);
+    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/video.png"];
 }
 
 @end
