@@ -16,6 +16,7 @@
 @property(nonatomic, strong, readwrite) UILabel *commentLabel;
 @property(nonatomic, strong, readwrite) UILabel *timeLabel;
 @property(nonatomic, strong, readwrite) UIImageView *rightImageView;
+@property(nonatomic, strong, readwrite) UIButton *deleteButton;
 @end
 
 @implementation CustomTableViewCell
@@ -48,12 +49,23 @@
             self.timeLabel;
         })];
         [self.contentView addSubview:({
+            self.deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 15, self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height + 15, 80, 20)];
+            [self.deleteButton setTitle:@"删除" forState:UIControlStateNormal];
+            [self.deleteButton setTitle:@"删除中" forState:UIControlStateHighlighted];
+            self.deleteButton.backgroundColor = [UIColor blueColor];
+            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            self.deleteButton;
+        })];
+        [self.contentView addSubview:({
             self.rightImageView = [[UIImageView alloc] init];
             self.rightImageView;
         })];
     }
-
     return self;
+}
+
+- (void)deleteButtonClick{
+    NSLog(@"click delete");
 }
 
 - (void)initLabelText {
